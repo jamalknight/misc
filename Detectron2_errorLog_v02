@@ -1,0 +1,727 @@
+Collecting git+https://github.com/facebookresearch/detectron2.git
+  Cloning https://github.com/facebookresearch/detectron2.git to /tmp/pip-req-build-ruwueh0a
+  Running command git clone -q https://github.com/facebookresearch/detectron2.git /tmp/pip-req-build-ruwueh0a
+Requirement already satisfied: termcolor>=1.1 in ./lib/python3.6/site-packages (from detectron2==0.1.1) (1.1.0)
+Requirement already satisfied: Pillow in ./lib/python3.6/site-packages (from detectron2==0.1.1) (7.0.0)
+Requirement already satisfied: yacs>=0.1.6 in ./lib/python3.6/site-packages (from detectron2==0.1.1) (0.1.6)
+Requirement already satisfied: tabulate in ./lib/python3.6/site-packages (from detectron2==0.1.1) (0.8.6)
+Requirement already satisfied: cloudpickle in ./lib/python3.6/site-packages (from detectron2==0.1.1) (1.3.0)
+Requirement already satisfied: matplotlib in ./lib/python3.6/site-packages (from detectron2==0.1.1) (3.2.0)
+Requirement already satisfied: tqdm>4.29.0 in ./lib/python3.6/site-packages (from detectron2==0.1.1) (4.43.0)
+Requirement already satisfied: tensorboard in ./lib/python3.6/site-packages (from detectron2==0.1.1) (2.1.1)
+Requirement already satisfied: fvcore in ./lib/python3.6/site-packages (from detectron2==0.1.1) (0.1.dev200308)
+Requirement already satisfied: future in ./lib/python3.6/site-packages (from detectron2==0.1.1) (0.18.2)
+Requirement already satisfied: pydot in ./lib/python3.6/site-packages (from detectron2==0.1.1) (1.4.1)
+Requirement already satisfied: PyYAML in ./lib/python3.6/site-packages (from yacs>=0.1.6->detectron2==0.1.1) (5.3)
+Requirement already satisfied: python-dateutil>=2.1 in ./lib/python3.6/site-packages (from matplotlib->detectron2==0.1.1) (2.8.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in ./lib/python3.6/site-packages (from matplotlib->detectron2==0.1.1) (1.1.0)
+Requirement already satisfied: numpy>=1.11 in ./lib/python3.6/site-packages (from matplotlib->detectron2==0.1.1) (1.18.1)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in ./lib/python3.6/site-packages (from matplotlib->detectron2==0.1.1) (2.4.6)
+Requirement already satisfied: cycler>=0.10 in ./lib/python3.6/site-packages (from matplotlib->detectron2==0.1.1) (0.10.0)
+Requirement already satisfied: grpcio>=1.24.3 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (1.27.2)
+Requirement already satisfied: google-auth<2,>=1.6.3 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (1.11.2)
+Requirement already satisfied: protobuf>=3.6.0 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (3.11.3)
+Requirement already satisfied: wheel>=0.26; python_version >= "3" in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (0.34.2)
+Requirement already satisfied: requests<3,>=2.21.0 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (2.23.0)
+Requirement already satisfied: six>=1.10.0 in /home/13787650/.local/lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (1.14.0)
+Requirement already satisfied: werkzeug>=0.11.15 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (1.0.0)
+Requirement already satisfied: absl-py>=0.4 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (0.9.0)
+Requirement already satisfied: markdown>=2.6.8 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (3.2.1)
+Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (0.4.1)
+Requirement already satisfied: setuptools>=41.0.0 in ./lib/python3.6/site-packages (from tensorboard->detectron2==0.1.1) (45.2.0.post20200210)
+Requirement already satisfied: portalocker in ./lib/python3.6/site-packages (from fvcore->detectron2==0.1.1) (1.5.2)
+Requirement already satisfied: rsa<4.1,>=3.1.4 in ./lib/python3.6/site-packages (from google-auth<2,>=1.6.3->tensorboard->detectron2==0.1.1) (4.0)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in ./lib/python3.6/site-packages (from google-auth<2,>=1.6.3->tensorboard->detectron2==0.1.1) (0.2.8)
+Requirement already satisfied: cachetools<5.0,>=2.0.0 in ./lib/python3.6/site-packages (from google-auth<2,>=1.6.3->tensorboard->detectron2==0.1.1) (4.0.0)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in ./lib/python3.6/site-packages (from requests<3,>=2.21.0->tensorboard->detectron2==0.1.1) (1.25.8)
+Requirement already satisfied: chardet<4,>=3.0.2 in ./lib/python3.6/site-packages (from requests<3,>=2.21.0->tensorboard->detectron2==0.1.1) (3.0.4)
+Requirement already satisfied: idna<3,>=2.5 in ./lib/python3.6/site-packages (from requests<3,>=2.21.0->tensorboard->detectron2==0.1.1) (2.9)
+Requirement already satisfied: certifi>=2017.4.17 in ./lib/python3.6/site-packages (from requests<3,>=2.21.0->tensorboard->detectron2==0.1.1) (2019.11.28)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in ./lib/python3.6/site-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard->detectron2==0.1.1) (1.3.0)
+Requirement already satisfied: pyasn1>=0.1.3 in ./lib/python3.6/site-packages (from rsa<4.1,>=3.1.4->google-auth<2,>=1.6.3->tensorboard->detectron2==0.1.1) (0.4.8)
+Requirement already satisfied: oauthlib>=3.0.0 in ./lib/python3.6/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard->detectron2==0.1.1) (3.1.0)
+Building wheels for collected packages: detectron2
+  Building wheel for detectron2 (setup.py): started
+  Building wheel for detectron2 (setup.py): still running...
+  Building wheel for detectron2 (setup.py): still running...
+  Building wheel for detectron2 (setup.py): finished with status 'error'
+  ERROR: Command errored out with exit status 1:
+   command: /home/13787650/anaconda3/envs/Mesh_RCNN_v07/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-req-build-ruwueh0a/setup.py'"'"'; __file__='"'"'/tmp/pip-req-build-ruwueh0a/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-ao_p3t9l
+       cwd: /tmp/pip-req-build-ruwueh0a/
+  Complete output (331 lines):
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build/lib.linux-x86_64-3.6
+  creating build/lib.linux-x86_64-3.6/detectron2
+  copying detectron2/__init__.py -> build/lib.linux-x86_64-3.6/detectron2
+  creating build/lib.linux-x86_64-3.6/detectron2/engine
+  copying detectron2/engine/launch.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+  copying detectron2/engine/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+  copying detectron2/engine/hooks.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+  copying detectron2/engine/defaults.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+  copying detectron2/engine/train_loop.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+  creating build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/shape_spec.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/rotated_boxes.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/roi_align_rotated.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/batch_norm.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/deform_conv.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/nms.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/roi_align.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/mask_ops.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  copying detectron2/layers/wrappers.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+  creating build/lib.linux-x86_64-3.6/detectron2/structures
+  copying detectron2/structures/instances.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+  copying detectron2/structures/image_list.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+  copying detectron2/structures/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+  copying detectron2/structures/rotated_boxes.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+  copying detectron2/structures/keypoints.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+  copying detectron2/structures/boxes.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+  copying detectron2/structures/masks.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+  creating build/lib.linux-x86_64-3.6/detectron2/export
+  copying detectron2/export/patcher.py -> build/lib.linux-x86_64-3.6/detectron2/export
+  copying detectron2/export/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/export
+  copying detectron2/export/caffe2_inference.py -> build/lib.linux-x86_64-3.6/detectron2/export
+  copying detectron2/export/caffe2_export.py -> build/lib.linux-x86_64-3.6/detectron2/export
+  copying detectron2/export/shared.py -> build/lib.linux-x86_64-3.6/detectron2/export
+  copying detectron2/export/api.py -> build/lib.linux-x86_64-3.6/detectron2/export
+  copying detectron2/export/c10.py -> build/lib.linux-x86_64-3.6/detectron2/export
+  copying detectron2/export/caffe2_modeling.py -> build/lib.linux-x86_64-3.6/detectron2/export
+  creating build/lib.linux-x86_64-3.6/detectron2/checkpoint
+  copying detectron2/checkpoint/catalog.py -> build/lib.linux-x86_64-3.6/detectron2/checkpoint
+  copying detectron2/checkpoint/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/checkpoint
+  copying detectron2/checkpoint/detection_checkpoint.py -> build/lib.linux-x86_64-3.6/detectron2/checkpoint
+  copying detectron2/checkpoint/c2_model_loading.py -> build/lib.linux-x86_64-3.6/detectron2/checkpoint
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo
+  copying detectron2/model_zoo/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/model_zoo
+  copying detectron2/model_zoo/model_zoo.py -> build/lib.linux-x86_64-3.6/detectron2/model_zoo
+  creating build/lib.linux-x86_64-3.6/detectron2/config
+  copying detectron2/config/config.py -> build/lib.linux-x86_64-3.6/detectron2/config
+  copying detectron2/config/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/config
+  copying detectron2/config/defaults.py -> build/lib.linux-x86_64-3.6/detectron2/config
+  copying detectron2/config/compat.py -> build/lib.linux-x86_64-3.6/detectron2/config
+  creating build/lib.linux-x86_64-3.6/detectron2/modeling
+  copying detectron2/modeling/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+  copying detectron2/modeling/box_regression.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+  copying detectron2/modeling/sampling.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+  copying detectron2/modeling/matcher.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+  copying detectron2/modeling/test_time_augmentation.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+  copying detectron2/modeling/anchor_generator.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+  copying detectron2/modeling/postprocessing.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+  copying detectron2/modeling/poolers.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+  creating build/lib.linux-x86_64-3.6/detectron2/solver
+  copying detectron2/solver/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/solver
+  copying detectron2/solver/lr_scheduler.py -> build/lib.linux-x86_64-3.6/detectron2/solver
+  copying detectron2/solver/build.py -> build/lib.linux-x86_64-3.6/detectron2/solver
+  creating build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/panoptic_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/cityscapes_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/sem_seg_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/coco_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/rotated_coco_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/lvis_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/pascal_voc_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/testing.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  copying detectron2/evaluation/evaluator.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+  creating build/lib.linux-x86_64-3.6/detectron2/data
+  copying detectron2/data/catalog.py -> build/lib.linux-x86_64-3.6/detectron2/data
+  copying detectron2/data/common.py -> build/lib.linux-x86_64-3.6/detectron2/data
+  copying detectron2/data/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/data
+  copying detectron2/data/dataset_mapper.py -> build/lib.linux-x86_64-3.6/detectron2/data
+  copying detectron2/data/build.py -> build/lib.linux-x86_64-3.6/detectron2/data
+  copying detectron2/data/detection_utils.py -> build/lib.linux-x86_64-3.6/detectron2/data
+  creating build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/visualizer.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/video_visualizer.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/memory.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/collect_env.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/registry.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/serialize.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/comm.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/colormap.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/analysis.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/logger.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/env.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  copying detectron2/utils/events.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+  creating build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  copying detectron2/modeling/roi_heads/rotated_fast_rcnn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  copying detectron2/modeling/roi_heads/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  copying detectron2/modeling/roi_heads/cascade_rcnn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  copying detectron2/modeling/roi_heads/keypoint_head.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  copying detectron2/modeling/roi_heads/box_head.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  copying detectron2/modeling/roi_heads/roi_heads.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  copying detectron2/modeling/roi_heads/fast_rcnn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  copying detectron2/modeling/roi_heads/mask_head.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+  creating build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+  copying detectron2/modeling/proposal_generator/proposal_utils.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+  copying detectron2/modeling/proposal_generator/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+  copying detectron2/modeling/proposal_generator/rpn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+  copying detectron2/modeling/proposal_generator/build.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+  copying detectron2/modeling/proposal_generator/rrpn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+  copying detectron2/modeling/proposal_generator/rrpn_outputs.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+  copying detectron2/modeling/proposal_generator/rpn_outputs.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+  creating build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+  copying detectron2/modeling/backbone/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+  copying detectron2/modeling/backbone/build.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+  copying detectron2/modeling/backbone/resnet.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+  copying detectron2/modeling/backbone/fpn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+  copying detectron2/modeling/backbone/backbone.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+  creating build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+  copying detectron2/modeling/meta_arch/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+  copying detectron2/modeling/meta_arch/panoptic_fpn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+  copying detectron2/modeling/meta_arch/rcnn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+  copying detectron2/modeling/meta_arch/semantic_seg.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+  copying detectron2/modeling/meta_arch/retinanet.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+  copying detectron2/modeling/meta_arch/build.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+  creating build/lib.linux-x86_64-3.6/detectron2/data/transforms
+  copying detectron2/data/transforms/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/data/transforms
+  copying detectron2/data/transforms/transform.py -> build/lib.linux-x86_64-3.6/detectron2/data/transforms
+  copying detectron2/data/transforms/transform_gen.py -> build/lib.linux-x86_64-3.6/detectron2/data/transforms
+  creating build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/lvis_v0_5_categories.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/lvis.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/register_coco.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/builtin_meta.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/builtin.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/coco.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/pascal_voc.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  copying detectron2/data/datasets/cityscapes.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+  creating build/lib.linux-x86_64-3.6/detectron2/data/samplers
+  copying detectron2/data/samplers/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/data/samplers
+  copying detectron2/data/samplers/distributed_sampler.py -> build/lib.linux-x86_64-3.6/detectron2/data/samplers
+  copying detectron2/data/samplers/grouped_batch_sampler.py -> build/lib.linux-x86_64-3.6/detectron2/data/samplers
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+  copying detectron2/model_zoo/configs/Base-RetinaNet.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+  copying detectron2/model_zoo/configs/Base-RCNN-DilatedC5.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+  copying detectron2/model_zoo/configs/Base-RCNN-C4.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+  copying detectron2/model_zoo/configs/Base-RCNN-FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+  copying detectron2/model_zoo/configs/COCO-PanopticSegmentation/panoptic_fpn_R_50_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+  copying detectron2/model_zoo/configs/COCO-PanopticSegmentation/Base-Panoptic-FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+  copying detectron2/model_zoo/configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+  copying detectron2/model_zoo/configs/COCO-PanopticSegmentation/panoptic_fpn_R_50_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Detectron1-Comparisons
+  copying detectron2/model_zoo/configs/Detectron1-Comparisons/keypoint_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Detectron1-Comparisons
+  copying detectron2/model_zoo/configs/Detectron1-Comparisons/faster_rcnn_R_50_FPN_noaug_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Detectron1-Comparisons
+  copying detectron2/model_zoo/configs/Detectron1-Comparisons/mask_rcnn_R_50_FPN_noaug_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Detectron1-Comparisons
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/keypoint_rcnn_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/fast_rcnn_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/semantic_R_50_FPN_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/semantic_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/panoptic_fpn_R_50_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_GCV_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/rpn_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/rpn_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/fast_rcnn_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/retinanet_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/keypoint_rcnn_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/panoptic_fpn_R_50_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_GCN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/semantic_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/panoptic_fpn_R_50_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/keypoint_rcnn_R_50_FPN_normalized_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_FPN_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_DC5_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/retinanet_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  copying detectron2/model_zoo/configs/quick_schedules/keypoint_rcnn_R_50_FPN_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_101_DC5_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_C4_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/fast_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/retinanet_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/retinanet_R_101_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_101_C4_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/rpn_R_50_C4_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/rpn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_DC5_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_X_101_32x8d_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_DC5_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/retinanet_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_C4_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/semantic_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_3x_syncbn.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_1x_cls_agnostic.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/scratch_mask_rcnn_R_50_FPN_3x_gn.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/cascade_mask_rcnn_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_1x_dconv_c3-c5.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/panoptic_fpn_R_101_dconv_cascade_gn_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/cascade_mask_rcnn_X_152_32x8d_FPN_IN5k_gn_dconv.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/cascade_mask_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_3x_gn.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_3x_dconv_c3-c5.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_DC5_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_101_DC5_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_C4_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_DC5_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_101_C4_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_C4_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Cityscapes
+  copying detectron2/model_zoo/configs/Cityscapes/mask_rcnn_R_50_FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Cityscapes
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/LVIS-InstanceSegmentation
+  copying detectron2/model_zoo/configs/LVIS-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/LVIS-InstanceSegmentation
+  copying detectron2/model_zoo/configs/LVIS-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/LVIS-InstanceSegmentation
+  copying detectron2/model_zoo/configs/LVIS-InstanceSegmentation/mask_rcnn_R_101_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/LVIS-InstanceSegmentation
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+  copying detectron2/model_zoo/configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+  copying detectron2/model_zoo/configs/COCO-Keypoints/Base-Keypoint-RCNN-FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+  copying detectron2/model_zoo/configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+  copying detectron2/model_zoo/configs/COCO-Keypoints/keypoint_rcnn_X_101_32x8d_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+  copying detectron2/model_zoo/configs/COCO-Keypoints/keypoint_rcnn_R_101_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+  creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/PascalVOC-Detection
+  copying detectron2/model_zoo/configs/PascalVOC-Detection/faster_rcnn_R_50_FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/PascalVOC-Detection
+  copying detectron2/model_zoo/configs/PascalVOC-Detection/faster_rcnn_R_50_C4.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/PascalVOC-Detection
+  running build_ext
+  building 'detectron2._C' extension
+  creating build/temp.linux-x86_64-3.6
+  creating build/temp.linux-x86_64-3.6/tmp
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/box_iou_rotated
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign
+  creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/deformable
+  gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/vision.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/vision.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+  cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+  gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+  cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+  In file included from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/ATen.h:9:0,
+                   from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                   from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated.h:3,
+                   from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp:3:
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp: In lambda function:
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:116:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+       at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                          ^
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp:446:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES_AND_HALF’
+     AT_DISPATCH_FLOATING_TYPES_AND_HALF(
+     ^
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+   inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                         ^~~~~~~~~~~
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp: In lambda function:
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:116:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+       at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                          ^
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp:497:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES_AND_HALF’
+     AT_DISPATCH_FLOATING_TYPES_AND_HALF(
+     ^
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+   inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                         ^~~~~~~~~~~
+  gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/box_iou_rotated/box_iou_rotated_cpu.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/box_iou_rotated/box_iou_rotated_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+  cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+  gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+  cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+  In file included from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/ATen.h:9:0,
+                   from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                   from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated.h:3,
+                   from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.cpp:3:
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.cpp: In lambda function:
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:103:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+       at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                          ^
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.cpp:67:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES’
+     AT_DISPATCH_FLOATING_TYPES(dets.type(), "nms_rotated", [&] {
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+   inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                         ^~~~~~~~~~~
+  gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+  cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+  In file included from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/ATen.h:9:0,
+                   from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                   from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign.h:3,
+                   from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp:3:
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp: In lambda function:
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:116:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+       at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                          ^
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp:429:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES_AND_HALF’
+     AT_DISPATCH_FLOATING_TYPES_AND_HALF(input.type(), "ROIAlign_forward", [&] {
+     ^
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+   inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                         ^~~~~~~~~~~
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp: In lambda function:
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:116:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+       at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                          ^
+  /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp:481:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES_AND_HALF’
+     AT_DISPATCH_FLOATING_TYPES_AND_HALF(grad.type(), "ROIAlign_forward", [&] {
+     ^
+  /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+   inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                         ^~~~~~~~~~~
+  /usr/bin/nvcc -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cuda.cu -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cuda.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options '-fPIC' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_52,code=sm_52 -std=c++11
+  cc1plus: fatal error: cuda_runtime.h: No such file or directory
+  compilation terminated.
+  error: command '/usr/bin/nvcc' failed with exit status 1
+  ----------------------------------------
+  ERROR: Failed building wheel for detectron2
+  Running setup.py clean for detectron2
+Failed to build detectron2
+Installing collected packages: detectron2
+    Running setup.py install for detectron2: started
+    Running setup.py install for detectron2: still running...
+    Running setup.py install for detectron2: finished with status 'error'
+    ERROR: Command errored out with exit status 1:
+     command: /home/13787650/anaconda3/envs/Mesh_RCNN_v07/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-req-build-ruwueh0a/setup.py'"'"'; __file__='"'"'/tmp/pip-req-build-ruwueh0a/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-5ifmcsze/install-record.txt --single-version-externally-managed --compile --install-headers /home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m/detectron2
+         cwd: /tmp/pip-req-build-ruwueh0a/
+    Complete output (331 lines):
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.linux-x86_64-3.6
+    creating build/lib.linux-x86_64-3.6/detectron2
+    copying detectron2/__init__.py -> build/lib.linux-x86_64-3.6/detectron2
+    creating build/lib.linux-x86_64-3.6/detectron2/engine
+    copying detectron2/engine/launch.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+    copying detectron2/engine/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+    copying detectron2/engine/hooks.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+    copying detectron2/engine/defaults.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+    copying detectron2/engine/train_loop.py -> build/lib.linux-x86_64-3.6/detectron2/engine
+    creating build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/shape_spec.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/rotated_boxes.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/roi_align_rotated.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/batch_norm.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/deform_conv.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/nms.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/roi_align.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/mask_ops.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    copying detectron2/layers/wrappers.py -> build/lib.linux-x86_64-3.6/detectron2/layers
+    creating build/lib.linux-x86_64-3.6/detectron2/structures
+    copying detectron2/structures/instances.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+    copying detectron2/structures/image_list.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+    copying detectron2/structures/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+    copying detectron2/structures/rotated_boxes.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+    copying detectron2/structures/keypoints.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+    copying detectron2/structures/boxes.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+    copying detectron2/structures/masks.py -> build/lib.linux-x86_64-3.6/detectron2/structures
+    creating build/lib.linux-x86_64-3.6/detectron2/export
+    copying detectron2/export/patcher.py -> build/lib.linux-x86_64-3.6/detectron2/export
+    copying detectron2/export/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/export
+    copying detectron2/export/caffe2_inference.py -> build/lib.linux-x86_64-3.6/detectron2/export
+    copying detectron2/export/caffe2_export.py -> build/lib.linux-x86_64-3.6/detectron2/export
+    copying detectron2/export/shared.py -> build/lib.linux-x86_64-3.6/detectron2/export
+    copying detectron2/export/api.py -> build/lib.linux-x86_64-3.6/detectron2/export
+    copying detectron2/export/c10.py -> build/lib.linux-x86_64-3.6/detectron2/export
+    copying detectron2/export/caffe2_modeling.py -> build/lib.linux-x86_64-3.6/detectron2/export
+    creating build/lib.linux-x86_64-3.6/detectron2/checkpoint
+    copying detectron2/checkpoint/catalog.py -> build/lib.linux-x86_64-3.6/detectron2/checkpoint
+    copying detectron2/checkpoint/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/checkpoint
+    copying detectron2/checkpoint/detection_checkpoint.py -> build/lib.linux-x86_64-3.6/detectron2/checkpoint
+    copying detectron2/checkpoint/c2_model_loading.py -> build/lib.linux-x86_64-3.6/detectron2/checkpoint
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo
+    copying detectron2/model_zoo/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/model_zoo
+    copying detectron2/model_zoo/model_zoo.py -> build/lib.linux-x86_64-3.6/detectron2/model_zoo
+    creating build/lib.linux-x86_64-3.6/detectron2/config
+    copying detectron2/config/config.py -> build/lib.linux-x86_64-3.6/detectron2/config
+    copying detectron2/config/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/config
+    copying detectron2/config/defaults.py -> build/lib.linux-x86_64-3.6/detectron2/config
+    copying detectron2/config/compat.py -> build/lib.linux-x86_64-3.6/detectron2/config
+    creating build/lib.linux-x86_64-3.6/detectron2/modeling
+    copying detectron2/modeling/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+    copying detectron2/modeling/box_regression.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+    copying detectron2/modeling/sampling.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+    copying detectron2/modeling/matcher.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+    copying detectron2/modeling/test_time_augmentation.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+    copying detectron2/modeling/anchor_generator.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+    copying detectron2/modeling/postprocessing.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+    copying detectron2/modeling/poolers.py -> build/lib.linux-x86_64-3.6/detectron2/modeling
+    creating build/lib.linux-x86_64-3.6/detectron2/solver
+    copying detectron2/solver/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/solver
+    copying detectron2/solver/lr_scheduler.py -> build/lib.linux-x86_64-3.6/detectron2/solver
+    copying detectron2/solver/build.py -> build/lib.linux-x86_64-3.6/detectron2/solver
+    creating build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/panoptic_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/cityscapes_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/sem_seg_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/coco_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/rotated_coco_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/lvis_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/pascal_voc_evaluation.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/testing.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    copying detectron2/evaluation/evaluator.py -> build/lib.linux-x86_64-3.6/detectron2/evaluation
+    creating build/lib.linux-x86_64-3.6/detectron2/data
+    copying detectron2/data/catalog.py -> build/lib.linux-x86_64-3.6/detectron2/data
+    copying detectron2/data/common.py -> build/lib.linux-x86_64-3.6/detectron2/data
+    copying detectron2/data/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/data
+    copying detectron2/data/dataset_mapper.py -> build/lib.linux-x86_64-3.6/detectron2/data
+    copying detectron2/data/build.py -> build/lib.linux-x86_64-3.6/detectron2/data
+    copying detectron2/data/detection_utils.py -> build/lib.linux-x86_64-3.6/detectron2/data
+    creating build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/visualizer.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/video_visualizer.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/memory.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/collect_env.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/registry.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/serialize.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/comm.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/colormap.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/analysis.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/logger.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/env.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    copying detectron2/utils/events.py -> build/lib.linux-x86_64-3.6/detectron2/utils
+    creating build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    copying detectron2/modeling/roi_heads/rotated_fast_rcnn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    copying detectron2/modeling/roi_heads/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    copying detectron2/modeling/roi_heads/cascade_rcnn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    copying detectron2/modeling/roi_heads/keypoint_head.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    copying detectron2/modeling/roi_heads/box_head.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    copying detectron2/modeling/roi_heads/roi_heads.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    copying detectron2/modeling/roi_heads/fast_rcnn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    copying detectron2/modeling/roi_heads/mask_head.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/roi_heads
+    creating build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+    copying detectron2/modeling/proposal_generator/proposal_utils.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+    copying detectron2/modeling/proposal_generator/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+    copying detectron2/modeling/proposal_generator/rpn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+    copying detectron2/modeling/proposal_generator/build.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+    copying detectron2/modeling/proposal_generator/rrpn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+    copying detectron2/modeling/proposal_generator/rrpn_outputs.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+    copying detectron2/modeling/proposal_generator/rpn_outputs.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/proposal_generator
+    creating build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+    copying detectron2/modeling/backbone/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+    copying detectron2/modeling/backbone/build.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+    copying detectron2/modeling/backbone/resnet.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+    copying detectron2/modeling/backbone/fpn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+    copying detectron2/modeling/backbone/backbone.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/backbone
+    creating build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+    copying detectron2/modeling/meta_arch/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+    copying detectron2/modeling/meta_arch/panoptic_fpn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+    copying detectron2/modeling/meta_arch/rcnn.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+    copying detectron2/modeling/meta_arch/semantic_seg.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+    copying detectron2/modeling/meta_arch/retinanet.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+    copying detectron2/modeling/meta_arch/build.py -> build/lib.linux-x86_64-3.6/detectron2/modeling/meta_arch
+    creating build/lib.linux-x86_64-3.6/detectron2/data/transforms
+    copying detectron2/data/transforms/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/data/transforms
+    copying detectron2/data/transforms/transform.py -> build/lib.linux-x86_64-3.6/detectron2/data/transforms
+    copying detectron2/data/transforms/transform_gen.py -> build/lib.linux-x86_64-3.6/detectron2/data/transforms
+    creating build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/lvis_v0_5_categories.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/lvis.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/register_coco.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/builtin_meta.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/builtin.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/coco.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/pascal_voc.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    copying detectron2/data/datasets/cityscapes.py -> build/lib.linux-x86_64-3.6/detectron2/data/datasets
+    creating build/lib.linux-x86_64-3.6/detectron2/data/samplers
+    copying detectron2/data/samplers/__init__.py -> build/lib.linux-x86_64-3.6/detectron2/data/samplers
+    copying detectron2/data/samplers/distributed_sampler.py -> build/lib.linux-x86_64-3.6/detectron2/data/samplers
+    copying detectron2/data/samplers/grouped_batch_sampler.py -> build/lib.linux-x86_64-3.6/detectron2/data/samplers
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+    copying detectron2/model_zoo/configs/Base-RetinaNet.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+    copying detectron2/model_zoo/configs/Base-RCNN-DilatedC5.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+    copying detectron2/model_zoo/configs/Base-RCNN-C4.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+    copying detectron2/model_zoo/configs/Base-RCNN-FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+    copying detectron2/model_zoo/configs/COCO-PanopticSegmentation/panoptic_fpn_R_50_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+    copying detectron2/model_zoo/configs/COCO-PanopticSegmentation/Base-Panoptic-FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+    copying detectron2/model_zoo/configs/COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+    copying detectron2/model_zoo/configs/COCO-PanopticSegmentation/panoptic_fpn_R_50_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-PanopticSegmentation
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Detectron1-Comparisons
+    copying detectron2/model_zoo/configs/Detectron1-Comparisons/keypoint_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Detectron1-Comparisons
+    copying detectron2/model_zoo/configs/Detectron1-Comparisons/faster_rcnn_R_50_FPN_noaug_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Detectron1-Comparisons
+    copying detectron2/model_zoo/configs/Detectron1-Comparisons/mask_rcnn_R_50_FPN_noaug_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Detectron1-Comparisons
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/keypoint_rcnn_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/fast_rcnn_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/semantic_R_50_FPN_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/semantic_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/panoptic_fpn_R_50_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_GCV_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/rpn_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/rpn_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/fast_rcnn_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/retinanet_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/keypoint_rcnn_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/panoptic_fpn_R_50_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_GCN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_C4_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/semantic_R_50_FPN_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/panoptic_fpn_R_50_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/keypoint_rcnn_R_50_FPN_normalized_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_FPN_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/mask_rcnn_R_50_DC5_inference_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/retinanet_R_50_FPN_instant_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    copying detectron2/model_zoo/configs/quick_schedules/keypoint_rcnn_R_50_FPN_training_acc_test.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/quick_schedules
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_101_DC5_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_C4_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/fast_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/retinanet_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/retinanet_R_101_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_101_C4_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/rpn_R_50_C4_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/rpn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_DC5_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_X_101_32x8d_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_DC5_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/retinanet_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    copying detectron2/model_zoo/configs/COCO-Detection/faster_rcnn_R_50_C4_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Detection
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/semantic_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_3x_syncbn.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_1x_cls_agnostic.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/scratch_mask_rcnn_R_50_FPN_3x_gn.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/cascade_mask_rcnn_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_1x_dconv_c3-c5.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/panoptic_fpn_R_101_dconv_cascade_gn_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/cascade_mask_rcnn_X_152_32x8d_FPN_IN5k_gn_dconv.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/cascade_mask_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_3x_gn.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    copying detectron2/model_zoo/configs/Misc/mask_rcnn_R_50_FPN_3x_dconv_c3-c5.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Misc
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_DC5_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_101_DC5_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_C4_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_DC5_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_101_C4_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_C4_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    copying detectron2/model_zoo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-InstanceSegmentation
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Cityscapes
+    copying detectron2/model_zoo/configs/Cityscapes/mask_rcnn_R_50_FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/Cityscapes
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/LVIS-InstanceSegmentation
+    copying detectron2/model_zoo/configs/LVIS-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/LVIS-InstanceSegmentation
+    copying detectron2/model_zoo/configs/LVIS-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/LVIS-InstanceSegmentation
+    copying detectron2/model_zoo/configs/LVIS-InstanceSegmentation/mask_rcnn_R_101_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/LVIS-InstanceSegmentation
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+    copying detectron2/model_zoo/configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_1x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+    copying detectron2/model_zoo/configs/COCO-Keypoints/Base-Keypoint-RCNN-FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+    copying detectron2/model_zoo/configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+    copying detectron2/model_zoo/configs/COCO-Keypoints/keypoint_rcnn_X_101_32x8d_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+    copying detectron2/model_zoo/configs/COCO-Keypoints/keypoint_rcnn_R_101_FPN_3x.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/COCO-Keypoints
+    creating build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/PascalVOC-Detection
+    copying detectron2/model_zoo/configs/PascalVOC-Detection/faster_rcnn_R_50_FPN.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/PascalVOC-Detection
+    copying detectron2/model_zoo/configs/PascalVOC-Detection/faster_rcnn_R_50_C4.yaml -> build/lib.linux-x86_64-3.6/detectron2/model_zoo/configs/PascalVOC-Detection
+    running build_ext
+    building 'detectron2._C' extension
+    creating build/temp.linux-x86_64-3.6
+    creating build/temp.linux-x86_64-3.6/tmp
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/box_iou_rotated
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign
+    creating build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/deformable
+    gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/vision.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/vision.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+    cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+    gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+    cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+    In file included from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/ATen.h:9:0,
+                     from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                     from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated.h:3,
+                     from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp:3:
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp: In lambda function:
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:116:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+         at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                            ^
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp:446:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES_AND_HALF’
+       AT_DISPATCH_FLOATING_TYPES_AND_HALF(
+       ^
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+     inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                           ^~~~~~~~~~~
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp: In lambda function:
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:116:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+         at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                            ^
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cpu.cpp:497:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES_AND_HALF’
+       AT_DISPATCH_FLOATING_TYPES_AND_HALF(
+       ^
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+     inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                           ^~~~~~~~~~~
+    gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/box_iou_rotated/box_iou_rotated_cpu.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/box_iou_rotated/box_iou_rotated_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+    cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+    gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+    cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+    In file included from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/ATen.h:9:0,
+                     from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                     from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated.h:3,
+                     from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.cpp:3:
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.cpp: In lambda function:
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:103:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+         at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                            ^
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/nms_rotated/nms_rotated_cpu.cpp:67:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES’
+       AT_DISPATCH_FLOATING_TYPES(dets.type(), "nms_rotated", [&] {
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+     inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                           ^~~~~~~~~~~
+    gcc -pthread -B /home/13787650/anaconda3/envs/Mesh_RCNN_v07/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11
+    cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+    In file included from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/ATen.h:9:0,
+                     from /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                     from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign.h:3,
+                     from /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp:3:
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp: In lambda function:
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:116:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+         at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                            ^
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp:429:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES_AND_HALF’
+       AT_DISPATCH_FLOATING_TYPES_AND_HALF(input.type(), "ROIAlign_forward", [&] {
+       ^
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+     inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                           ^~~~~~~~~~~
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp: In lambda function:
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:116:56: warning: ‘c10::ScalarType detail::scalar_type(const at::DeprecatedTypeProperties&)’ is deprecated [-Wdeprecated-declarations]
+         at::ScalarType _st = ::detail::scalar_type(the_type);                    \
+                                                            ^
+    /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlign/ROIAlign_cpu.cpp:481:3: note: in expansion of macro ‘AT_DISPATCH_FLOATING_TYPES_AND_HALF’
+       AT_DISPATCH_FLOATING_TYPES_AND_HALF(grad.type(), "ROIAlign_forward", [&] {
+       ^
+    /home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/ATen/Dispatch.h:31:23: note: declared here
+     inline at::ScalarType scalar_type(const at::DeprecatedTypeProperties &t) {
+                           ^~~~~~~~~~~
+    /usr/bin/nvcc -DWITH_CUDA -I/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/torch/csrc/api/include -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/TH -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/lib/python3.6/site-packages/torch/include/THC -I/home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m -c /tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cuda.cu -o build/temp.linux-x86_64-3.6/tmp/pip-req-build-ruwueh0a/detectron2/layers/csrc/ROIAlignRotated/ROIAlignRotated_cuda.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options '-fPIC' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_52,code=sm_52 -std=c++11
+    cc1plus: fatal error: cuda_runtime.h: No such file or directory
+    compilation terminated.
+    error: command '/usr/bin/nvcc' failed with exit status 1
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: /home/13787650/anaconda3/envs/Mesh_RCNN_v07/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-req-build-ruwueh0a/setup.py'"'"'; __file__='"'"'/tmp/pip-req-build-ruwueh0a/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-5ifmcsze/install-record.txt --single-version-externally-managed --compile --install-headers /home/13787650/anaconda3/envs/Mesh_RCNN_v07/include/python3.6m/detectron2 Check the logs for full command output.
